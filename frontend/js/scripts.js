@@ -9,6 +9,15 @@ createApp({
             todos: []
         };
     },
+    methods: {
+        // Creo una funzione che cambia il completamento dei Task
+        changeDone (index) {
+
+            // Applico un controllo per cui il valore di 'done' di ogni singolo todo viene invertito
+            this.todos[index].done = !this.todos[index].done;
+
+        }
+    },
     mounted() {
         // Faccio la chiamata alla nostra API
         axios

@@ -23,7 +23,9 @@
             <div id="todos" class="container mt-5">
                 <div class="mt-5">
                     <ul class="list-group container">
-                        <li v-for="(singleTodo, index) in todos" 
+                        <li 
+                        v-for="(singleTodo, index) in todos" 
+                        @click="changeDone(index)"
                            :class="{
                             'done': singleTodo.done == true,
                             'not-done': singleTodo.done == false
