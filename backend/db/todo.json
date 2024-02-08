@@ -1,0 +1,26 @@
+[
+    {
+        "text" : "Completare la Milestone 1",
+        "done": true 
+    }, 
+    {
+        "text" : "Completare la Milestone 2",
+        "done": true 
+    }, 
+    {
+        "text" : "Completare la Milestone 3",
+        "done": true 
+    }, 
+    {
+        "text" : "Finire l'esercizio di oggi",
+        "done": true 
+    }, 
+    {
+        "text" : "Completare il 1^ Bonus",
+        "done": true
+    },
+    {
+        "text" : "Completare il 2^ Bonus",
+        "done": true
+    }
+]
