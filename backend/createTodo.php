@@ -1,9 +1,9 @@
 <?php
 
 if ( 
-    isset($_POST["text"])
+    isset($_POST['text'])
     &&
-    strlen($_POST["text"]) > 4
+    strlen($_POST['text']) > 4
 ) {
 
 #Recupero i Todo Esistenti
