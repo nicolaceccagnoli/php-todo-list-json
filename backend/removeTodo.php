@@ -8,7 +8,7 @@ $allTodosList = json_decode($allTodoString, true);
 #Applico una funzione che rimuove un elemento specifico dalla Lista passato come parametro in POST
 unset($allTodosList[$_POST['index']]);
 
-#Assegno ad una variabile l'indice dell'Array originale riavviati da 0
+#Assegno ad una variabile l'indice dell'Array originale riavviato da 0
 $todoListIndex = array_values($allTodosList);
 
 #Ritrasformo l'array in una stringa json

@@ -19,6 +19,21 @@ createApp({
         changeDone (index) {
 
             // Applico un controllo per cui il valore di 'done' di ogni singolo todo viene invertito
+            axios
+            .post('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/changeDoneTodo.php', 
+            {
+                index: index,
+            },
+            {
+                // Aggiungo un parametro che specifica al Server che tipo di dato gli sto passando (tipo file)
+                headers: {
+                    'Content-Type' : 'multipart/form-data'
+                }
+            })
+            .then(response => {
+                console.log(response);
+            })
+
             this.todos[index].done = !this.todos[index].done;
 
         },
