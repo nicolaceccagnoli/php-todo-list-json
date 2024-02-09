@@ -24,7 +24,8 @@ createApp({
         createObjTodos() {
             // Faccio una nuova chiamata axios con metodo POST al file PHP con le istruzioni per creare il nuovo Todo
             axios
-            .post('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/createTodo.php', {
+            .post('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/createTodo.php',
+                {
                     // Gli passo come parametro la variabile che interagisce con l'input dell'utente
                     text: this.newTodo
                 },
@@ -37,18 +38,20 @@ createApp({
             )
             // Gestisco la risposta della chiamata
             .then(response => {
-                this.todos.push({
-                    task: this.newTodo,
-                    done: false
-                });
-
-                this.newTodo = '';
+                
+                // Faccio la chiamata alla nostra API
+                axios
+                .get('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/todo.php')
+                .then((response) => {
+                    console.log(response.data);
+                    this.todos = response.data;
+                })
 
             })
 
         }
     },
-    mounted() {
+    created() {
         // Faccio la chiamata alla nostra API
         axios
             .get('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/todo.php')

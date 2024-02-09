@@ -19,4 +19,5 @@ header('Content-Type: application/json');
 
 #Rispondo con il json preso dal file
 echo $stringaJSONPresaDalDb;
+
 ?>

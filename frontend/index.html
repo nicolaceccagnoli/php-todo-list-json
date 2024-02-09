@@ -21,7 +21,7 @@
         <main>
 
             <div class="d-flex justify-content-center input-group">
-                <input v-model="newTodo" @keyup.enter="createObjTodos()" type="text" placeholder="Scrivi cosa hai da fare" class="me-3">
+                <input v-model="newTodo" @keyup.enter="createObjTodos()" type="text" placeholder="Scrivi cosa hai da fare" class="me-3" minlength="5" required>
                 <button @click="createObjTodos()"
                  class="btn btn-primary">
                     Aggiungi alla Lista
