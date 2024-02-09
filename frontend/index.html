@@ -20,6 +20,14 @@
     
         <main>
 
+            <div class="d-flex justify-content-center input-group">
+                <input v-model="newTodo" @keyup.enter="createObjTodos()" type="text" placeholder="Scrivi cosa hai da fare" class="me-3">
+                <button @click="createObjTodos()"
+                 class="btn btn-primary">
+                    Aggiungi alla Lista
+                </button>
+            </div>
+
             <div id="todos" class="container mt-5">
                 <div class="mt-5">
                     <ul class="list-group container">
@@ -27,7 +35,7 @@
                         v-for="(singleTodo, index) in todos" 
                         @click="changeDone(index)"
                            :class="{
-                            'done': singleTodo.done == true,
+                            'done': singleTodo.done,
                             'not-done': singleTodo.done == false
                             }" class="list-group-item d-flex justify-content-between to-do-list">
                             {{ index + 1 }} - {{ singleTodo.text }}

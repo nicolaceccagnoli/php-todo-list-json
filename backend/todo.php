@@ -1,4 +1,7 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+
 /*
 
     PRENDO I DATI DAL FILE JSON

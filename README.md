@@ -10,3 +10,14 @@ Prima assicuratevi che la vostra pagina index.php/index.html (il vostro front-en
 Solo a questo punto sarà utile passare alla lettura della lista da un file JSON.
 Bonus
 Mostrare lo stato del task → se completato, barrare il testo
+
+<!-- Parte 2 -->
+
+Lavoriamo sulla stessa repo di ieri
+Descrizione
+Aggiungiamo la possibilità di scrivere nella lista di Todo creata ieri (sempre in persistenza, scrivendoli nel file JSON).
+Bonus
+
+- Permettere di segnare un task come completato facendo click sul testo
+- Permettere il toggle del task (completato/non completato)
+- Abilitare l'eliminazione di un task
