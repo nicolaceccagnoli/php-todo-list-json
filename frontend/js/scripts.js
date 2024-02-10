@@ -11,7 +11,11 @@ createApp({
             // Dichiaro una variabile con stringa vuota per il nuovo Todo dell'utente
             newTodo: '',
 
-            // 
+            //Creo una flag per editare il Todo
+            editIndex: null,
+
+            //Creo una nuova variabile con stringa vuota per il todo editato
+            editTodo: ''
         };
     },
     methods: {
@@ -94,6 +98,51 @@ createApp({
             })
 
             this.todos.splice(index, 1);
+        },showEdit(index) {
+
+            this.editIndex = index; 
+
+        },
+        editSingleTodo(index) {
+
+            // Faccio una nuova chiamata axios con metodo POST al file PHP con le istruzioni per creare il nuovo Todo
+            axios
+            .post('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/editTodo.php',
+                {
+                    // Gli passo come parametro la variabile che interagisce con l'input dell'utente
+                    text: this.editTodo,
+                    // Gli passo come parametro l'argomento della funzione
+                    index: index
+
+                },
+                {
+                    // Aggiungo un parametro che specifica al Server che tipo di dato gli sto passando (tipo file)
+                    headers: {
+                        'Content-Type' : 'multipart/form-data'
+                    }
+                }
+            )
+            // Gestisco la risposta della chiamata
+            .then(response => {
+
+                if (response.data.code == 200){
+                    this.todos[index].text = this.editTodo;
+                    this.editTodo = '';
+
+                }
+
+                // Faccio la chiamata alla nostra API
+                // axios
+                //     .get('http://localhost:8888/BOOLEAN-114/php-todo-list-json/backend/todo.php')
+                //     .then((response) => {
+                //         console.log(response.data);
+                //         this.todos = response.data;
+                //     })
+
+            })
+
+            this.editIndex = null; 
+                        
         }
     },
     created() {
