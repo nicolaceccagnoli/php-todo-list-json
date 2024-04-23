@@ -1,23 +1,31 @@
-# php-todo-list-jsonDescrizione
+# ToDo List Web App
 
-Dobbiamo creare una web-app che permetta di leggere una lista di Todo.
-Deve essere anche gestita la persistenza dei dati leggendoli da un file JSON.
-Stack
-Html, CSS, VueJS (importato tramite CDN), axios, PHP
-Consigli
-Nello svolgere l'esercizio seguite un approccio graduale.
-Prima assicuratevi che la vostra pagina index.php/index.html (il vostro front-end) riesca a comunicare correttamente con il vostro script PHP (le vostre "API").
-Solo a questo punto sarà utile passare alla lettura della lista da un file JSON.
-Bonus
-Mostrare lo stato del task → se completato, barrare il testo
+This project is a web application for managing a ToDo list. It allows users to read, edit, and remove tasks. The application features data persistence by reading and writing tasks to a JSON file.
 
-<!-- Parte 2 -->
+## Stack
 
-Lavoriamo sulla stessa repo di ieri
-Descrizione
-Aggiungiamo la possibilità di scrivere nella lista di Todo creata ieri (sempre in persistenza, scrivendoli nel file JSON).
-Bonus
+The project is built using the following technologies:
 
-- Permettere di segnare un task come completato facendo click sul testo
-- Permettere il toggle del task (completato/non completato)
-- Abilitare l'eliminazione di un task
+- HTML
+- CSS
+- Vue.js (imported via CDN)
+- Axios
+- PHP
+
+## Getting Started
+
+To get started with the ToDo list web app, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Open the project directory.
+3. Set up your server environment to run PHP scripts (e.g., Apache, XAMPP).
+4. Ensure that your front-end (index.php or index.html) communicates correctly with your PHP script (your APIs).
+5. Once the communication between the front-end and PHP script is established, proceed to implement reading and writing tasks to a JSON file.
+
+## Usage
+
+The ToDo list web app allows users to perform the following actions:
+
+- View tasks: Display a list of tasks with options to edit and remove them.
+- Edit tasks: Modify task details, such as task description and completion status.
+- Remove tasks: Delete tasks from the list.
